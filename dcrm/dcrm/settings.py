@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '8u54nyny74758nhy745ytv65yvu45cmvhn7g748mcjh8jx8n547h67nbh9c54765854-nh587bv3cjmnv7h8vnht458v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['mb-fencing.uk','localhost','127.0.0.1', 'mb-deployment-production.up.railway.app' ]
 
