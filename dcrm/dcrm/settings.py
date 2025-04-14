@@ -137,3 +137,16 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = '/admin/login/'
+
+SESSION_COOKIE_SECURE = True  # Ensures that session cookies are only sent over HTTPS
+CSRF_COOKIE_SECURE = True     # Ensures that CSRF cookies are only sent over HTTPS
+
+SECURE_SSL_REDIRECT = True  # Redirects HTTP to HTTPS
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Include subdomains in HSTS policy
+SECURE_HSTS_PRELOAD = True  # Allow preloading in browsers (optional)
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
