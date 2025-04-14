@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'dcrm.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'Admin',
-        'PASSWORD': 'MBFMANAGEMENT_176!!',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'your_default_db_name'),
+        'USER': os.getenv('DB_USER', 'your_default_db_user'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'your_default_db_password'),
+        'HOST': os.getenv('DB_HOST', 'your_default_db_host'),
+        'PORT': os.getenv('DB_PORT', '5432'),
     }
 }
 
