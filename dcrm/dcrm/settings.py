@@ -150,3 +150,8 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True  # Include subdomains in HSTS policy
 SECURE_HSTS_PRELOAD = True  # Allow preloading in browsers (optional)
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
+
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+}
