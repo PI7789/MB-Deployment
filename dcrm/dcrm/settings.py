@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '8u54nyny74758nhy745ytv65yvu45cmvhn7g748mcjh8jx8n547h67nbh9c54765854-nh587bv3cjmnv7h8vnht458v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['mbfencing.info','localhost','127.0.0.1' ]
+ALLOWED_HOSTS = ['mb-fencing.uk','localhost','127.0.0.1' ]
 
 
 # Application definition
@@ -121,9 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'  # URL prefix for serving static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # This points to the root-level 'static' folder
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
