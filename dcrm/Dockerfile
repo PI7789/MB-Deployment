@@ -10,6 +10,8 @@ COPY . /app/
 # Step 4: Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+ENV DJANGO_SETTINGS_MODULE=dcrm.settings
+
 # Step 5: Collect static files (important for production)
 RUN python manage.py collectstatic --noinput
 

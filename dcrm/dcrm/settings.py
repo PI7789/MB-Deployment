@@ -155,5 +155,5 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 
 import dj_database_url
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(default='postgres://user:password@localhost:5432/dbname')
 }
