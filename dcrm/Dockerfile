@@ -23,4 +23,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Run the application using Waitress as the WSGI server
-CMD ["waitress-serve", "--host=0.0.0.0", "--port=8000", "dcrm/dcrm.wsgi:application"]
+CMD ["python", "runserver.py"]

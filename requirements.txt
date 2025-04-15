@@ -6,3 +6,4 @@ typing_extensions==4.13.2
 tzdata==2025.2
 waitress==3.0.2
 psycopg2>=2.9,<3
+whitenoise
