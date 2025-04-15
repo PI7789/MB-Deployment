@@ -17,4 +17,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Step 7: Run the application (using Waitress here, but you could use Gunicorn or another WSGI server)
-CMD ["waitress-serve", "--host=0.0.0.0", "--port=8000", "your_project.wsgi:application"]
+CMD ["waitress-serve", "--host=0.0.0.0", "--port=8000", "dcrm.wsgi:application"]
